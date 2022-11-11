@@ -466,7 +466,6 @@ if SET_BOT_COMMANDS:
         (f'{BotCommands.CancelMirror}','Cancel a task'),
         (f'{BotCommands.SearchCommand}','Search in Torrent'),
         (f'{BotCommands.PingCommand}','Ping the bot'),
-        (f'{BotCommands.RestartCommand}','Restart the bot'),
         (f'{BotCommands.LogCommand}','Get the bot Log'),
         (f'{BotCommands.HelpCommand}','Get detailed help')
     ]
