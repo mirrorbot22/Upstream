@@ -70,10 +70,10 @@ def getHerokuDetails(h_api_key, h_app_name):
         quota_remain = account_quota - quota_used
         if EMOJI_THEME is True:
             abc += f'<b></b>\n'
-            abc += f'<b>╭─《🌐 MASTER 🌐》</b>\n'
+            abc += f'<b>╭《🌐 MASTER 🌐》</b>\n'
         else:
             abc += f'<b></b>\n'
-            abc += f'<b>╭─《 MASTER 》</b>\n'
+            abc += f'<b>╭《 MASTER 》</b>\n'
         # App Quota
         AppQuotaUsed = 0
         OtherAppsUsage = 0
@@ -94,9 +94,9 @@ def getHerokuDetails(h_api_key, h_app_name):
                     pass
         LOGGER.info(f"This App: {str(app.name)}")
         if EMOJI_THEME is True:
-            abc += f'<b>╰─《 ☣️ @{AUTHOR_NAME} ☣️ 》</b>'
+            abc += f'<b>╰《 ☣️ @{AUTHOR_NAME} ☣️ 》</b>'
         else:
-            abc += f'<b>╰─《 @{AUTHOR_NAME} 》</b>'
+            abc += f'<b>╰《 @{AUTHOR_NAME} 》</b>'
         return abc
     except Exception as g:
         LOGGER.error(g)
