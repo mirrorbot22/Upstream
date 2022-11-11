@@ -70,16 +70,10 @@ def getHerokuDetails(h_api_key, h_app_name):
         quota_remain = account_quota - quota_used
         if EMOJI_THEME is True:
             abc += f'<b></b>\n'
-            abc += f'<b>╭─《🌐 HEROKU STATS 🌐》</b>\n'
-            abc += f"<b>├ 💪🏻 FULL</b>: {get_readable_time(account_quota)}\n"
-            abc += f"<b>├ 👎🏻 USED</b>: {get_readable_time(quota_used)}\n"
-            abc += f"<b>├ 👍🏻 FREE</b>: {get_readable_time(quota_remain)}\n"
+            abc += f'<b>╭─《🌐 MASTER 🌐》</b>\n'
         else:
             abc += f'<b></b>\n'
-            abc += f'<b>╭─《 HEROKU STATS 》</b>\n'
-            abc += f"<b>├ FULL</b>: {get_readable_time(account_quota)}\n"
-            abc += f"<b>├ USED</b>: {get_readable_time(quota_used)}\n"
-            abc += f"<b>├ FREE</b>: {get_readable_time(quota_remain)}\n"
+            abc += f'<b>╭─《 MASTER 》</b>\n'
         # App Quota
         AppQuotaUsed = 0
         OtherAppsUsage = 0
@@ -100,13 +94,9 @@ def getHerokuDetails(h_api_key, h_app_name):
                     pass
         LOGGER.info(f"This App: {str(app.name)}")
         if EMOJI_THEME is True:
-            abc += f"<b>├ 🎃 APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
-            abc += f"<b>├ 🗑️ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
-            abc += f'<b>╰─《 ☣️ {CREDIT_NAME} ☣️ 》</b>'
+            abc += f'<b>╰─《 ☣️ @{AUTHOR_NAME} ☣️ 》</b>'
         else:
-            abc += f"<b>├ APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
-            abc += f"<b>├ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
-            abc += f'<b>╰─《 {CREDIT_NAME} 》</b>'
+            abc += f'<b>╰─《 @{AUTHOR_NAME} 》</b>'
         return abc
     except Exception as g:
         LOGGER.error(g)
@@ -437,7 +427,7 @@ def bot_help(update, context):
     button = ButtonMaker()
     if EMOJI_THEME is True:
         button.buildbutton("👤 User", f"https://graph.org/{help_user}")
-        button.buildbutton("🛡️ Admin", f"https://graph.org/{help_admin}")
+        button.buildbutton("Admin 🛡️", f"https://graph.org/{help_admin}")
     else:
         button.buildbutton("User", f"https://graph.org/{help_user}")
         button.buildbutton("Admin", f"https://graph.org/{help_admin}")
