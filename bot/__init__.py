@@ -700,15 +700,15 @@ except KeyError:
 try:
     NAME_FONT = getConfig('NAME_FONT')
     if len(NAME_FONT) == 0:
-        NAME_FONT = 'code'
+        NAME_FONT = 'i'
 except KeyError:
-    NAME_FONT = 'code'
+    NAME_FONT = 'i'
 try:
     CAPTION_FONT = getConfig('CAPTION_FONT')
     if len(CAPTION_FONT) == 0:
-        CAPTION_FONT = 'code'
+        CAPTION_FONT = 'b'
 except KeyError:
-    CAPTION_FONT = 'code'
+    CAPTION_FONT = 'b'
 
 try:
     FINISHED_PROGRESS_STR = getConfig('FINISHED_PROGRESS_STR') 
