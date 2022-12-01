@@ -450,16 +450,16 @@ try:
     if len(START_BTN2_NAME) == 0 or len(START_BTN2_URL) == 0:
         raise KeyError
 except:
-    START_BTN2_NAME = 'Mirror Group'
-    START_BTN2_URL = 'https://t.me/TorrentLeechGroup'
+    START_BTN2_NAME = 'Support Channel'
+    START_BTN2_URL = 'https://t.me/KPSTorrent'
 try:
     BUTTON_FOUR_NAME = getConfig('BUTTON_FOUR_NAME')
     BUTTON_FOUR_URL = getConfig('BUTTON_FOUR_URL')
     if len(BUTTON_FOUR_NAME) == 0 or len(BUTTON_FOUR_URL) == 0:
         raise KeyError
 except:
-    BUTTON_FOUR_NAME = None
-    BUTTON_FOUR_URL = None
+    BUTTON_FOUR_NAME = 'BUY PRIVATE BOT'
+    BUTTON_FOUR_URL = 'https://t.me/Nanthakps'
 try:
     BUTTON_FIVE_NAME = getConfig('BUTTON_FIVE_NAME')
     BUTTON_FIVE_URL = getConfig('BUTTON_FIVE_URL')
