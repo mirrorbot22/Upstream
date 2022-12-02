@@ -508,14 +508,12 @@ class MirrorLeechListener:
                                     content=mesg,
                                 )["path"]
                                 buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}"),
-                                buttons.buildbutton(f"⚡ Buy Private Bot ⚡", f"https://t.me/Nanthakps")
                             elif is_url(mesg):
                                 source_link = mesg
                                 if source_link.startswith(("|", "pswd: ")):
                                     pass
                                 else:
-                                    buttons.buildbutton(f"🔗 Source Link", source_link),
-                                    buttons.buildbutton(f"⚡ Buy Private Bot ⚡", f"https://t.me/Nanthakps")
+                                    buttons.buildbutton(f"🔗 Source Link", source_link)
                             else:
                                 pass
                         except Exception:
@@ -530,11 +528,9 @@ class MirrorLeechListener:
                                             title=f"{TITLE_NAME} Source Link",
                                             content=source_link,
                                         )["path"]
-                                        buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}"),
-                                        buttons.buildbutton(f"⚡ Buy Private Bot ⚡", f"https://t.me/Nanthakps")
+                                        buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}"
                                     else:
                                         buttons.buildbutton(f"🔗 Source Link", source_link),
-                                        buttons.buildbutton(f"⚡ Buy Private Bot ⚡", f"https://t.me/Nanthakps")
                             except Exception:
                                 pass
                     else:
